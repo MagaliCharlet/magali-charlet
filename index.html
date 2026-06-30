@@ -345,6 +345,22 @@
       color: white;
     }
 
+    .video-placeholder img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.72;
+      z-index: 0;
+      transition: transform 220ms ease, opacity 220ms ease;
+    }
+
+    .video-placeholder:hover img {
+      transform: scale(1.035);
+      opacity: 0.82;
+    }
+
     .video-placeholder::before,
     .video-placeholder::after {
       content: "";
@@ -579,19 +595,14 @@
       <h2 id="event-title">Talents &amp; Territoires</h2>
       <p class="lead">Un temps fort dédié aux rencontres utiles entre talents, entreprises et acteurs du territoire.</p>
 
-      <!--
-        Bloc vidéo prévu pour plus tard :
-        1. Remplacer ce div par un lien <a href="URL_VIDEO_GITHUB" ...>
-        2. Ajouter une vraie capture dans /assets/images/talents-territoires.jpg
-        3. Remplacer le fond CSS par l'image si souhaité.
-      -->
-      <div class="video-placeholder" role="img" aria-label="Emplacement prévu pour la future vidéo Talents et Territoires">
+      <a class="video-placeholder" href="talents-et-territoires.mp4" target="_blank" rel="noopener noreferrer" aria-label="Voir la vidéo Talents et Territoires">
+        <img src="talents-et-territoires.jpg" alt="Aperçu de la vidéo Talents et Territoires" loading="lazy" />
         <div class="play" aria-hidden="true">▶</div>
-        <div class="video-caption">Miniature vidéo à venir · lien GitHub à ajouter</div>
-      </div>
+        <div class="video-caption">Cliquer pour voir la vidéo Talents &amp; Territoires</div>
+      </a>
 
       <div class="contact-actions">
-        <span class="btn btn-disabled" aria-disabled="true">Voir la vidéo — bientôt disponible</span>
+        <a class="btn btn-light" href="talents-et-territoires.mp4" target="_blank" rel="noopener noreferrer">Voir la vidéo</a>
       </div>
     </section>
 
